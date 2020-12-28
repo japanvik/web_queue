@@ -7,7 +7,9 @@ q = FIFOSQLiteQueue('my_queue', multithreading=True, auto_commit=True)
 app = FlaskAPI(__name__)
 
 """
-- [ ] Create endpoints for POST and GET
+(Persist-Queue)[https://github.com/peter-wangxu/persist-queue/blob/master/persistqueue/exceptions.py]
+(Flask API)[https://www.flaskapi.org]
+- [x] Create endpoints for POST and GET
 - [ ] Think about DELETE...
 """
 
