@@ -18,8 +18,8 @@ def manage_queue():
     """
     if request.method == 'POST':
         # Create a new queue entry
-        msg = request.data.get('message', '')
-        data = {'message':msg, 'created_at':datetime.now()}
+        data = {'message':request.data.get('message', ''),
+                'created_at':datetime.now()}
         q.put(data)
         return f'OK {len(q)} in QUEUE', status.HTTP_201_CREATED
     else:
