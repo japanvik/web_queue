@@ -1,7 +1,7 @@
 from flask import request
 from flask_api import FlaskAPI, status, exceptions
 from datetime import datetime
-from persistqueue import FIFOSQLiteQueue
+from persistqueue import FIFOSQLiteQueue, exceptions
 
 q = FIFOSQLiteQueue('my_queue', multithreading=True, auto_commit=True)
 app = FlaskAPI(__name__)
@@ -24,7 +24,10 @@ def manage_queue():
         return f'OK {len(q)} in QUEUE', status.HTTP_201_CREATED
     else:
         # request.method == 'GET'
-        msg = q.get()
+        try:
+            msg = q.get(timeout=0)
+        except exceptions.Empty:
+            msg = {}
         return msg
 
 @app.route('/count')
