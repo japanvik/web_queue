@@ -20,9 +20,9 @@ Web Queue is written in Python. The code base was written and tested using Pytho
 Checkout the repostitory and install dependencies
 
 ```
-$git clone https://github.com/japanvik/web_queue.git
-$cd web_queue
-$pip install -r requirements.txt
+$ git clone https://github.com/japanvik/web_queue.git
+$ cd web_queue
+$ pip install -r requirements.txt
 ```
 
 ### Running the server
@@ -31,7 +31,7 @@ ways Flask services can be executed. However, the most simplest way to get
 started is to run api.py directly.
 
 ```
-$python api.py 
+$ python api.py 
 ```
 
 This should create a local endpoint on port 5002. You can modify the port in
@@ -50,7 +50,7 @@ The root ('/') end point accepts a POST with a message parameter which will be
 stored in the queue
 
 ```
-$curl -X POST http://127.0.0.1:5002/ -d message="hello world"
+$ curl -X POST http://127.0.0.1:5002/ -d message="hello world"
 OK 1 in QUEUE
 ```
 Note that the result of the post will return the number of messages in the
