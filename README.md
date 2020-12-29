@@ -4,8 +4,8 @@ You can issue web requests to put and pop arbritary data into the Queue.
 
 It leverages these 2 awesome projects.
 
-- (Persist-Queue)[https://github.com/peter-wangxu/persist-queue/blob/master/persistqueue/exceptions.py]
-- (Flask API)[https://www.flaskapi.org]
+- [Persist-Queue](https://github.com/peter-wangxu/persist-queue/blob/master/persistqueue/exceptions.py)
+- [Flask API](https://www.flaskapi.org)
 
 ## Getting Started
 
